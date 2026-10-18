@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a1636"/>
+      <stop offset="1" stop-color="#0a0b16"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="20" y1="20" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b9a6ff"/>
+      <stop offset="0.5" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="64" cy="64" r="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#tile)"/>
+  <rect x="0.75" y="0.75" width="126.5" height="126.5" rx="27.25" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5"/>
+  <circle cx="64" cy="64" r="60" fill="url(#glow)"/>
+  <g fill="none" stroke="url(#mark)" stroke-width="11">
+    <rect x="25.5" y="25.5" width="31" height="31" rx="9"/>
+    <rect x="71.5" y="25.5" width="31" height="31" rx="9"/>
+    <rect x="25.5" y="71.5" width="31" height="31" rx="9"/>
+  </g>
+  <rect x="66" y="66" width="42" height="42" rx="11" fill="url(#mark)"/>
+</svg>

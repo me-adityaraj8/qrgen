@@ -1,0 +1,6 @@
+node_modules/
+dist/
+release/
+.e2e-artifacts/
+*.log
+.DS_Store
