@@ -71,6 +71,7 @@ npm run build        # type-checks, then builds the extension into dist/
 | `npm run test:e2e` | Builds, then runs the end-to-end suite in Chrome for Testing. Set `HEADFUL=1` to watch it. |
 | `npm run check` | Lint, typecheck, unit tests and E2E tests: everything CI should run. |
 | `npm run package` | Builds and writes `release/qr-code-generator-<version>.zip` for the Chrome Web Store. |
+| `npm run store-assets` | Renders the store screenshots (1280×800) and promo tile (440×280) from the real extension into `store/`. |
 | `npm run icons` | Re-renders `public/icons/*.png` from `assets/icon.svg`. |
 
 ### UI development without reloading the extension
@@ -151,7 +152,7 @@ Browser pages (new tab, `chrome://` pages, the Chrome Web Store) don't expose th
 
 1. Bump `version` in `package.json`. The manifest version is generated from it.
 2. Run `npm run package`. This creates `release/qr-code-generator-<version>.zip` with `manifest.json` at the archive root and prints its SHA-256.
-3. **Chrome Web Store:** upload the zip in the [Developer Dashboard](https://chrome.google.com/webstore/devconsole). Use the permission justifications above. For the privacy questionnaire: no user data is collected or transmitted, and local history can be disabled.
+3. **Chrome Web Store:** upload the zip in the [Developer Dashboard](https://chrome.google.com/webstore/devconsole), then fill in each tab from [`store/LISTING.md`](store/LISTING.md): description, images, privacy answers and the [privacy policy](PRIVACY.md).
 4. **Self-hosted `.crx` (optional):** in `chrome://extensions`, click **Pack extension**, choose `dist/`, and keep the generated `.pem` key safe and out of git. You need the same key for every update. Chrome on Windows and macOS only installs `.crx` files from the Web Store or via enterprise policy.
 
 ## Project structure
